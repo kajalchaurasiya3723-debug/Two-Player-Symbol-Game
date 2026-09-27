@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Two Player Symbol Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="title">
+            <span class="star">★</span>
+            Two Player Symbol Game
+        </div>
+
+        <div class="subtitle">
+            Complete 3 symbols in one row to win
+        </div>
+    </div>
+
+
+    <!-- GAME SETUP -->
+    <div id="setupSection">
+
+        <div class="setup-box">
+
+            <h1 class="setup-title">Game Setup</h1>
+
+            <p class="setup-description">
+                Two players can enter their names and choose their symbols.
+            </p>
+
+
+            <!-- PLAYER 1 -->
+            <div class="player">
+
+                <h2>Player 1</h2>
+
+                <label>Enter Player 1 Name</label>
+
+                <input
+                    id="player1Name"
+                    type="text"
+                    placeholder="Enter name"
+                >
+
+                <label>Choose Symbol</label>
+
+                <input
+                    id="player1Symbol"
+                    type="text"
+                    maxlength="1"
+                    placeholder="Only X or 0"
+                >
+
+                <div id="player1Status" class="status"></div>
+
+                <button
+                    id="activate1"
+                    class="activate-btn"
+                    type="button"
+                >
+                    Activate Player 1
+                </button>
+
+            </div>
+
+
+            <!-- PLAYER 2 -->
+            <div class="player">
+
+                <h2>Player 2</h2>
+
+                <label>Enter Player 2 Name</label>
+
+                <input
+                    id="player2Name"
+                    type="text"
+                    placeholder="Enter name"
+                    disabled
+                >
+
+                <label>Choose Symbol</label>
+
+                <input
+                    id="player2Symbol"
+                    type="text"
+                    disabled
+                >
+
+                <div id="player2Status" class="status"></div>
+
+                <button
+                    id="activate2"
+                    class="activate-btn"
+                    type="button"
+                    disabled
+                >
+                    Activate Player 2
+                </button>
+
+            </div>
+
+
+            <!-- START GAME -->
+            <button
+                id="startGame"
+                class="start-btn"
+                type="button"
+                disabled
+            >
+                Start Game
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- GAME SECTION -->
+    <div id="gameSection">
+
+        <!-- CURRENT TURN -->
+        <div class="turn-card">
+
+            <div class="current-title">
+                Current Turn
+            </div>
+
+            <div
+                id="currentName"
+                class="current-name">
+            </div>
+
+            <div class="symbol-badge">
+
+                Your Symbol
+
+                <span
+                    id="currentSymbol"
+                    class="current-symbol">
+                </span>
+
+            </div>
+
+            <div
+                id="reminder"
+                class="reminder">
+            </div>
+
+        </div>
+
+
+        <!-- SCORE -->
+        <div class="score-container">
+
+            <div class="score-card">
+
+                <div
+                    id="scoreName1"
+                    class="score-name">
+                </div>
+
+                <div
+                    id="scoreSymbol1"
+                    class="score-symbol">
+                </div>
+
+                Score:
+                <b id="score1">0</b>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <div
+                    id="scoreName2"
+                    class="score-name">
+                </div>
+
+                <div
+                    id="scoreSymbol2"
+                    class="score-symbol">
+                </div>
+
+                Score:
+                <b id="score2">0</b>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3 x 3 BOARD -->
+        <div class="board">
+
+            <button class="cell" data-index="0"></button>
+            <button class="cell" data-index="1"></button>
+            <button class="cell" data-index="2"></button>
+
+            <button class="cell" data-index="3"></button>
+            <button class="cell" data-index="4"></button>
+            <button class="cell" data-index="5"></button>
+
+            <button class="cell" data-index="6"></button>
+            <button class="cell" data-index="7"></button>
+            <button class="cell" data-index="8"></button>
+
+        </div>
+
+
+        <!-- RESULT -->
+        <div
+            id="result"
+            class="result">
+        </div>
+
+
+        <!-- GAME BUTTONS -->
+        <div class="game-buttons">
+
+            <button
+                class="game-btn"
+                id="newRound">
+            New newRound
+        </button>
+        <button 
+        class="game-btn"
+        id="resetGame">
+    Reset Game
+</button>
+</div>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: linear-gradient(135deg, #160b20, #30204b, #15102d);
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* HEADER */
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.star {
+    color: #ffc400;
+    font-size: 42px;
+}
+
+.subtitle {
+    margin-top: 8px;
+    color: #ddd;
+}
+
+
+/* SETUP */
+
+.setup-box {
+    background: rgba(70, 65, 115, 0.65);
+    padding: 30px;
+    border-radius: 22px;
+}
+
+.setup-title {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.setup-description {
+    text-align: center;
+    color: #ddd;
+    margin-bottom: 25px;
+}
+
+
+/* PLAYER */
+
+.player {
+    background: rgba(25, 22, 55, 0.75);
+    padding: 25px;
+    border-radius: 18px;
+    margin-bottom: 20px;
+}
+
+.player h2 {
+    color: #55caff;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border: 1px solid #66709d;
+    background: #15132e;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #29c5ff;
+}
+
+.status {
+    min-height: 22px;
+    color: #65e86d;
+    margin-bottom: 14px;
+}
+
+
+/* BUTTONS */
+
+.activate-btn,
+.start-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.activate-btn {
+    background: linear-gradient(90deg, #079de8, #20c4ff);
+}
+
+.start-btn {
+    background: linear-gradient(90deg, #4bcf99, #66e5b1);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+/* GAME */
+
+#gameSection {
+    display: none;
+}
+
+.turn-card {
+    text-align: center;
+    background: linear-gradient(135deg, #2468ef, #3157d7);
+    padding: 30px 20px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.current-title {
+    font-size: 19px;
+}
+
+.current-name {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 8px 0 15px;
+}
+
+.symbol-badge {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px 22px;
+    border-radius: 30px;
+}
+
+.current-symbol,
+.score-symbol {
+    color: #ffd000;
+    font-weight: bold;
+}
+
+.current-symbol {
+    font-size: 28px;
+}
+
+.reminder {
+    margin-top: 15px;
+    color: #eee;
+}
+
+
+/* SCORE */
+
+.score-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.score-card {
+    text-align: center;
+    background: rgba(100, 110, 170, 0.55);
+    border-radius: 18px;
+    padding: 20px;
+}
+
+.score-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.score-symbol {
+    font-size: 30px;
+    margin: 7px;
+}
+
+
+/* BOARD */
+
+.board {
+    width: min(90vw, 430px);
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.cell {
+    aspect-ratio: 1;
+    border-radius: 14px;
+    background: #293d7c;
+    border: 2px solid #7385c1;
+    color: #ffd000;
+    font-size: 65px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background: #435796;
+}
+
+.cell.winner {
+    background: #25aa68;
+}
+
+
+/* RESULT */
+
+.result {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+/* GAME BUTTONS */
+
+.game-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.game-btn {
+    padding: 13px 25px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    background: #6947e8;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .title {
+        font-size: 27px;
+    }
+
+    .setup-box {
+        padding: 18px;
+    }
+
+    .cell {
+        font-size: 50px;
+    }
+}
